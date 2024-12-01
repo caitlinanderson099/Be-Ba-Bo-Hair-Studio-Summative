@@ -51,7 +51,7 @@ const Cart = () => {
               <div className='empty-message'>
               <h3>Oops! There Are No Items In Your Cart!</h3>
               <h4>Browse Our Shop To Add Items</h4>
-              <button onClick={handleShop}>Browse Our Shop</button>
+              <button className='primary-button' onClick={handleShop}>Browse Our Shop</button>
               </div>
             ): (
               <div className='cart-cont'>
@@ -79,9 +79,9 @@ const Cart = () => {
                         </div>  
                         <p>Quantity: {item.quantity}</p>
                         <div className='cart-buttons'>
-                          <button onClick={() => handleDecrement(item)}>-</button>
-                          <button onClick={() => handleIncrement(item)}>+</button>
-                          <button onClick={() => removeFromCart(item.id)}>Remove</button>
+                          <button className='primary-button' onClick={() => handleDecrement(item)}>-</button>
+                          <button className='primary-button' onClick={() => handleIncrement(item)}>+</button>
+                          <button className='primary-button' onClick={() => removeFromCart(item.id)}>Remove</button>
                         </div>  
                       </div>
                     </div>
@@ -91,8 +91,8 @@ const Cart = () => {
                   <h2 className='title'>Total Amount:</h2>  
                   <h4>${totalAmount.toFixed(2)} GST(15%)</h4>   
                   <div className="buttons-cont">
-                    <button className='secondary' onClick={handleContinue}>Continue Shopping</button>  
-                    <button onClick={handleCheckout}>Proceed To Checkout</button>
+                    <button className='secondary-button' onClick={handleContinue}>Continue Shopping</button>  
+                    <button className='primary-button' onClick={handleCheckout}>Proceed To Checkout</button>
                   </div>      
                 </div>
                 </div>

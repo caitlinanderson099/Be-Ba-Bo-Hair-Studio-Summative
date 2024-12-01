@@ -83,7 +83,7 @@ if (error) {
               </div>
 
               {/* Add To Cart Button */}
-              <button onClick={() => handleAddToCart(product)}>Add to Cart</button>  
+              <button className='primary-button' onClick={() => handleAddToCart(product)}>Add to Cart</button>  
             </div>
 
 
@@ -103,7 +103,7 @@ if (error) {
                 className='modal-img'
               />
             )}
-            <button onClick={closeModal}>Close</button>
+            <button className='primary-button' onClick={closeModal}>Close</button>
           </div>
         </div>
       )}

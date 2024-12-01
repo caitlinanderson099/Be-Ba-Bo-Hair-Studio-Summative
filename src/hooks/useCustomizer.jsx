@@ -16,8 +16,10 @@ const useCustomizer = () => {
     const [navColor, setNavColor] = useState("");
 
     // Button Customisers
-    const [buttonColor, setButtonColor] = useState("");
-    const [buttonTextColor, setButtonTextColor] = useState("");
+    const [primaryButtonColor, setPrimaryButtonColor] = useState("");
+    const [primaryButtonTextColor, setPrimaryButtonTextColor] = useState("");
+    const [secondaryButtonColor, setSecondaryButtonColor] = useState("");
+    const [secondaryButtonTextColor, setSecondaryButtonTextColor] = useState("");
 
     // ENV Import
     const baseURL = import.meta.env.VITE_WP_BASE_URL;
@@ -26,13 +28,15 @@ const useCustomizer = () => {
     useEffect(() => {
         axios.get(`${baseURL}/wp-json/custom-theme/v1/customizer-settings`)
         .then((response) => {
-            const {backgroundColor, fontFamily, headerFont, navbarColor, footerColor, buttonColor, buttonTextColor} = response.data;
+            const {backgroundColor, fontFamily, headerFont, navbarColor, footerColor, primaryButtonColor, primaryButtonTextColor, secondaryButtonColor, secondaryButtonTextColor} = response.data;
             setBgColor(backgroundColor);
             setFontFamily(fontFamily);
             setHeaderFont(headerFont);
             setNavColor(navbarColor);
-            setButtonColor(buttonColor);
-            setButtonTextColor(buttonTextColor);
+            setPrimaryButtonColor(primaryButtonColor);
+            setPrimaryButtonTextColor(primaryButtonTextColor);
+            setSecondaryButtonColor(secondaryButtonColor);
+            setSecondaryButtonTextColor(secondaryButtonTextColor);
             setFooterColor(footerColor);
         })
         .catch((error) => {
@@ -41,7 +45,7 @@ const useCustomizer = () => {
     }, [baseURL]);
 
     // Customiser Return
-    return {bgColor, fontFamily, headerFont, navColor, buttonColor, buttonTextColor, footerColor};
+    return {bgColor, fontFamily, headerFont, navColor, primaryButtonColor, primaryButtonTextColor, secondaryButtonColor, secondaryButtonTextColor, footerColor};
 };
 
 export default useCustomizer;

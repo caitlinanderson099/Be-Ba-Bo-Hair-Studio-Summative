@@ -50,7 +50,7 @@ const Contact = () => {
     return (
       <div className='success-message'>
         <h3>Thank you for booking with Be Ba Bo!</h3>
-        <p>We will see you at your appointment!</p>
+        <p>We have received your booking request, an email will be sent to your provided email address with the details</p>
       </div>
     );
   };
@@ -140,7 +140,8 @@ const Contact = () => {
                   value={staff}
                   required
                 >
-                  <option value="">Any</option>
+                  <option value="">Please Select One</option>
+                  <option value="Any">Any</option>
                   <option value="Janine Marshall-Johnson">Janine Marshall-Johnson</option>
                   <option value="Zeb Schimanski-Hunt">Zeb Schimanski-Hunt</option>
                   <option value="Chloe Jackson">Chloe Jackson</option>
@@ -169,7 +170,7 @@ const Contact = () => {
 
               {/* Button */}
                 <button
-                  className='regular-button'
+                  className='regular-button primary-button'
                   type='submit'
                 >
                   Book Now
@@ -288,7 +289,7 @@ const Contact = () => {
   
                 {/* Button */}
                   <button
-                    className='regular-button'
+                    className='regular-button primary-button'
                     type='submit'
                   >
                     Send Message
@@ -301,11 +302,11 @@ const Contact = () => {
 
   return (
     <div className='contact-page'>
-        <PageHeader title='Book an Appointment' image_url={'/contact-bg.jpg'}/>
+        <PageHeader title='Contact Us' image_url={'/contact-bg.jpg'}/>
         <div className='contact-content'>
           {/* Booking Section */}
           <div className='booking-section'>
-            <h2> Fill out the form below to book an appointment </h2>
+            <h2> Book an appointment </h2>
             <BookingForm/>
           </div>
 

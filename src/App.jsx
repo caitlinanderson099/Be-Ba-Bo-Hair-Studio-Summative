@@ -8,7 +8,7 @@ import Footer from './components/Footer'
 
 const App = () => {
 
-  const {bgColor, fontFamily, headerFont, navColor, footerColor, buttonColor, buttonTextColor} = useCustomizer();
+  const {bgColor, fontFamily, headerFont, navColor, footerColor, primaryButtonColor, primaryButtonTextColor, secondaryButtonColor, secondaryButtonTextColor} = useCustomizer();
 
   // UseEffect
   useEffect(() => {
@@ -40,13 +40,19 @@ const App = () => {
 
     document.querySelector('nav').style.backgroundColor = navColor;
     document.querySelector('footer').style.backgroundColor = footerColor;
-    const buttons = document.querySelectorAll('button');
-    buttons.forEach(button => {
-      button.style.backgroundColor = buttonColor;
-      button.style.color = buttonTextColor;
-  })
+    const primaryButtons = document.querySelectorAll('.primary-button');
+    primaryButtons.forEach(button => {
+      button.style.backgroundColor = primaryButtonColor;
+      button.style.color = primaryButtonTextColor;
+    });
 
-  }, [bgColor, fontFamily, headerFont, navColor, footerColor, buttonColor, buttonTextColor])
+    const secondaryButtons = document.querySelectorAll('.secondary-button');
+    secondaryButtons.forEach(button => {
+      button.style.backgroundColor = secondaryButtonColor;
+      button.style.color = secondaryButtonTextColor;
+    });
+
+  }, [bgColor, fontFamily, headerFont, navColor, footerColor, primaryButtonColor, primaryButtonTextColor, secondaryButtonColor, secondaryButtonTextColor])
 
   return (
     <HashRouter>

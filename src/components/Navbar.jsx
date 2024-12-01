@@ -83,7 +83,7 @@ const Navbar = () => {
                 </NavLink>
             </li>
 
-            <NavLink to="/" className="logo">
+            <NavLink to="/" onClick={closeMenu} id="logo" className={({ isActive }) => (isActive ? "active-link" : "")}>
             <img src={logoUrl} alt="website logo" />
             </NavLink>
 
@@ -107,7 +107,7 @@ const Navbar = () => {
                 </NavLink>
             </li>
 
-            <button onClick={handleBook}>Book Now</button>
+            <button className="primary-button" onClick={handleBook}>Book Now</button>
             </ul>
         </nav>
         {isOpen && <div className="overlay" onClick={closeMenu}></div>}

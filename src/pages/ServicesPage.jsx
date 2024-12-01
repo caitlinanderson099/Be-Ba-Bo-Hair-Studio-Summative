@@ -125,8 +125,8 @@ const ServicesPage = () => {
                         </div>
 
                         <div className="buttons-cont">
-                            <button className="read-more"> <a href={`#service/${service.id}`}> Read More </a> </button>   
-                            <button onClick={handleBook}>Book Now</button>
+                            <button className="read-more secondary-button"> <a href={`#service/${service.id}`}> Read More </a> </button>   
+                            <button className="primary-button" onClick={handleBook}>Book Now</button>
                         </div>   
                     </div>
 

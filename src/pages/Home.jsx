@@ -48,8 +48,8 @@ const Home = () => {
             <h2> Enhancing Natural Beauty Through Creativity </h2>
             <p>Welcome to Be Ba Bo Hair Studio, where expert cuts, colors, and transformations highlight your unique style. Our skilled team delivers top-quality results with the latest techniques to help you shine with confidence!</p>
             <div className='buttons-cont'>
-            <button className="secondary" onClick={handleShop}>Shop Products</button>
-            <button onClick={handleBook}>Book Now</button>
+            <button className="secondary-button" onClick={handleShop}>Shop Products</button>
+            <button className='primary-button' onClick={handleBook}>Book Now</button>
           </div>
           </div>
         </div>
@@ -131,7 +131,7 @@ const Home = () => {
          
        
           </div>
-          <button onClick={handleExplore}> Explore More </button>
+          <button className='primary-button' onClick={handleExplore}> Explore More </button>
         </div>
 
         <div className="review-section">
@@ -218,7 +218,7 @@ const Home = () => {
             </div>
 
           </div>
-          <button> Leave Us a Review </button>
+          <button className='primary-button'> Leave Us a Review </button>
         </div>
 
       </div>

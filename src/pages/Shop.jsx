@@ -86,7 +86,7 @@ const Shop = () => {
                         />
                     </div>
                     <button
-                        className='regular-button'
+                        className='regular-button primary-button'
                         type='submit'
                     >
                         Sign Up

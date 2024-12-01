@@ -88,8 +88,8 @@ const About = () => {
                 <h2> Explore Our Business! </h2>
                 <p>At Be Ba Bo, we believe in celebrating individuality and empowering confidence through exceptional hair care. Let us help you shine—inside and out! Explore what we have to offer.</p>
                 <div className="buttons-cont">
-                    <button id="secondary">Our Shop</button>
-                    <button>Our Services</button>
+                    <button className="secondary-button">Our Shop</button>
+                    <button className="primary-button">Our Services</button>
                 </div>
             </div>
         </div>

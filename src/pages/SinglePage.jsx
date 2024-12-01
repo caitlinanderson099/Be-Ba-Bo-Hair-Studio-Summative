@@ -171,7 +171,7 @@ const SinglePage = () => {
     
                   {/* Button */}
                     <button
-                      className='regular-button'
+                      className='regular-button primary-button'
                       type='submit'
                     >
                       Submit Review
@@ -198,7 +198,7 @@ const SinglePage = () => {
     const SingleHeader = ({title, image_url}) => {
       return (
           <div className="single-header" style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(${image_url})`}}>
-              <button onClick={handleBack}> Back </button>
+              <button className="primary-button" onClick={handleBack}> Back </button>
               <h1> {title} </h1>
           </div>
       )
@@ -219,8 +219,11 @@ const SinglePage = () => {
                   <img src={getFeaturedImage(service)} alt="service photo" />
                 </div>
                 <div className="content-cont">
+                <h2> {service.title.rendered} </h2>
+
+                <h3>Service Details</h3>
                 <div className="service-info">
-              <h4 className="service-tag"> {service.acf.service_categories} </h4>
+              <h4 className="service-tag">{service.acf.service_categories} </h4>
               <div className="service-prices service-tag">
                 <h4 className="regular-price"> {service.acf.service_regular_prices} </h4>
                 <h4> {service.acf.service_sale_prices} </h4>
@@ -232,10 +235,9 @@ const SinglePage = () => {
                 <p>Taxonomies not available for this service.</p>
               )}
               </div>
-            </div>
-                <h2> {service.title.rendered} </h2>
+                </div>
                   <div className="details" dangerouslySetInnerHTML={{ __html: service.content.rendered }}/>
-                  <button onClick={handleBook}>Book an Appointment</button>
+                  <button className="primary-button" onClick={handleBook}>Book an Appointment</button>
                 </div>
               </div>
         </div>

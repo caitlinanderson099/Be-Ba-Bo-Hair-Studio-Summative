@@ -30,8 +30,8 @@ const Checkout = () => {
             <div className="question-section">
               <h2>Are You Sure You Want To Purchase?</h2>
               <div className="buttons-cont">
-                <button className="secondary" onClick={handleBack}>No, I'm Not Sure</button>
-                <button onClick={handleConfirmation}>Yes, I'm Sure</button>
+                <button className="secondary-button" onClick={handleBack}>No, I'm Not Sure</button>
+                <button className="primary-button" onClick={handleConfirmation}>Yes, I'm Sure</button>
               </div>
             </div>
         </div>
@@ -41,7 +41,7 @@ const Checkout = () => {
           <div className="modal-content">
             <h2>Order Has Been Placed!</h2>
             <h3>Thank you for shopping at Be Ba Bo Hair Studio</h3>
-            <button onClick={closeModal}>Close</button>
+            <button className="primary-button" onClick={closeModal}>Close</button>
           </div>
         </div>
       )}
