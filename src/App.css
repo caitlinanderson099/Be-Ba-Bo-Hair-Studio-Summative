@@ -131,8 +131,16 @@ p, label {
   width: 100%; /* Fully underline the active link */
 }
 
+@media screen and (max-width: 1400px) {
+  .nav-links  li a {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+  }
+}
+
 /* Navbar Large Mobile and Under CSS */
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .menu-icon {
     display: flex;
   }
@@ -528,8 +536,10 @@ footer {
   }
 }
 
-/* Home Page Large Mobile */
-@media screen and (max-width: 600px) {
+
+
+/* Home Page Tablet */
+@media screen and (max-width: 900px) {
   .home-content {
     .mission-section {
       grid-template-columns: 1fr;

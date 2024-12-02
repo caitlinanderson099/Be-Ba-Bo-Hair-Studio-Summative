@@ -4,6 +4,7 @@ import axios from "axios";
 import PageHeader from "../components/PageHeader";
 import { useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
+import Seo from '../components/Seo'
 
 // Base URL Variable
 const baseURL = import.meta.env.VITE_WP_API_BASEURL;
@@ -155,7 +156,8 @@ const ServicesPage = () => {
     // Master Return
     return (
         <>
-        
+         {/* SEO */}
+         <Seo title="Our Services - Be Ba Bo" description="This is all the services for Be Ba Bo Hair Studio" />
         <div className="services-page">
             <PageHeader title='Our Services' image_url={'/services-bg.jpg'}/>
             <div className="services-content">

@@ -1,5 +1,6 @@
 import PageHeader from '../components/PageHeader';
 import { Navigation, Pagination} from 'swiper/modules';
+import Seo from '../components/Seo'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -40,6 +41,9 @@ const Home = () => {
 
   // Master Return
   return (
+    <>
+     {/* SEO */}
+     <Seo title="Home - Be Ba Bo" description="This is home page for Be Ba Bo Hair Studio" />
     <div className='home-page'>
       <PageHeader title='Be Ba Bo Hair Studio' image_url={'/home-bg.jpg'}/>
       <div className="home-content">
@@ -227,7 +231,7 @@ const Home = () => {
       </div>
 
       </div> 
-      // end of home page
+      </>
   );
 };
 

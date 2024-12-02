@@ -2,6 +2,7 @@ import React, {useContext}from 'react';
 import PageHeader from './PageHeader';
 import { CartContext } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
+import Seo from '../components/Seo';
 
 const Cart = () => {
 
@@ -42,6 +43,9 @@ const Cart = () => {
   );
 
   return (
+    <>
+    {/* SEO */}
+    <Seo title="My Cart - Be Ba Bo"/>
     <div className='cart-page'>
         <PageHeader title='My Cart' image_url={'/cart-bg.jpg'}/>
         <div className='cart-content'>
@@ -101,6 +105,7 @@ const Cart = () => {
           </div>
         </div>
     </div>
+    </>
   );
 }; 
 

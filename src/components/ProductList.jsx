@@ -3,6 +3,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import wooCommerceApi from '../woocommerceApi';
 import {CartContext} from '../context/CartContext';
 import ClipLoader from 'react-spinners/ClipLoader';
+import Seo from '../components/Seo';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -28,16 +29,16 @@ const ProductList = () => {
   }, []);
 
   if (loading) {
-    return (
-        <div className="loading">
-            <ClipLoader color="#D4BC73" size={50} />
-        </div>
-    );
-}
+      return (
+          <div className="loading">
+              <ClipLoader color="#D4BC73" size={50} />
+          </div>
+      );
+  }
 
-if (error) {
-  return <div className="error-message">{error}</div>;
-}
+  if (error) {
+    return <div className="error-message">{error}</div>;
+  }
 
   const handleAddToCart = (product) => {
     addToCart(product);
@@ -51,6 +52,9 @@ if (error) {
 
   return (
     <> 
+     {/* SEO */}
+     <Seo title="Shop - Be Ba Bo" description="Explore the shop" />
+
     <div className='products-grid'>
         {products.map((product) => (
           <div key={product.id} className='product-card'>
@@ -85,8 +89,6 @@ if (error) {
               {/* Add To Cart Button */}
               <button className='primary-button' onClick={() => handleAddToCart(product)}>Add to Cart</button>  
             </div>
-
-
           </div>
         ))}
         </div>

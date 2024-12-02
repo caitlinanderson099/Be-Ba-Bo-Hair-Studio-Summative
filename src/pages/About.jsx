@@ -1,6 +1,7 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
 import PageHeader from "../components/PageHeader";
 import { useNavigate } from "react-router-dom";
+import Seo from '../components/Seo'
 
 const About = () => {
 
@@ -21,6 +22,9 @@ const About = () => {
 
 
   return (
+    <>
+     {/* SEO */}
+     <Seo title="About Us - Be Ba Bo" description="This is all the information for Be Ba Bo Hair Studio" />
     <div className='about-page'>
         <PageHeader title='About Us' image_url={'/about-bg.jpg'}/>
         <div className="about-content">
@@ -112,6 +116,7 @@ const About = () => {
             </div>
         </div>
     </div>
+    </>
   );
 };
 

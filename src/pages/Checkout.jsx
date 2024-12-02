@@ -2,6 +2,7 @@ import PageHeader from "../components/PageHeader";
 import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import Seo from '../components/Seo'
 
 const Checkout = () => {
 
@@ -26,6 +27,9 @@ const Checkout = () => {
   };
 
   return (
+    <>
+     {/* SEO */}
+     <Seo title="Checkout - Be Ba Bo" />
     <div className="checkout-page">
         <PageHeader title='Checkout' image_url={'/checkout-bg.jpg'}/>
         <div className="checkout-content">
@@ -49,6 +53,7 @@ const Checkout = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

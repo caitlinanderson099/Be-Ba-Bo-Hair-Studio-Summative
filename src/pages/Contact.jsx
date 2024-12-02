@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import PageHeader from '../components/PageHeader';
 import axios from 'axios';
+import Seo from '../components/Seo'
 
 const formEndPoint = import.meta.env.VITE_APP_WP_API_BOOKING_FORM_ENDPOINT;
 const contactFormEndPoint = import.meta.env.VITE_APP_WP_API_CONTACT_FORM_ENDPOINT;
@@ -301,6 +302,9 @@ const Contact = () => {
 
 
   return (
+    <>
+     {/* SEO */}
+     <Seo title="Contact Us - Be Ba Bo"/>
     <div className='contact-page'>
         <PageHeader title='Contact Us' image_url={'/contact-bg.jpg'}/>
         <div className='contact-content'>
@@ -332,6 +336,7 @@ const Contact = () => {
         </div>
         
     </div>
+    </>
   );
 };
 
