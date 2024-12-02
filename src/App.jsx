@@ -35,7 +35,7 @@ const App = () => {
     document.querySelector('h1').style.fontFamily = headerFont;
     document.querySelector('h2').style.fontFamily = headerFont;
     document.querySelector('h3').style.fontFamily = headerFont;
-    document.querySelector('h4').style.fontFamily = headerFont;
+    // document.querySelector('h4').style.fontFamily = headerFont;
 
 
     document.querySelector('nav').style.backgroundColor = navColor;

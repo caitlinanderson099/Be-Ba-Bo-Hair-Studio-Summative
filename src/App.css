@@ -132,16 +132,67 @@ p, label {
   width: 100%; /* Fully underline the active link */
 }
 
-@media screen and (max-width: 1400px) {
-  .nav-links  li a {
-    display: flex;
-    justify-content: center;
-    font-size: 15px;
+/* Footer CSS */
+footer {
+  display: flex;
+  flex-direction: column;
+  color: #fbfbfb;
+  padding: 20px;
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50%;
+    .logo-location {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+      }
+      .subtitle-info {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+    }
+    .footer-right {
+      display: flex;
+      justify-content: space-around;
+      .group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+    }
+  }
+  .copyright {
+    margin-top: 20px;
+    text-align: center;
   }
 }
 
-/* Navbar Large Mobile and Under CSS */
-@media (max-width: 1080px) {
+@media screen and (max-width: 1080px) {
+
+  .shop-page {
+    .shop-content {
+      .products-grid {
+        grid-template-columns: repeat(3,1fr);
+      }
+    }
+  }
+
+
+  .services-page .services-content #serviceCont {
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
   .menu-icon {
     display: flex;
   }
@@ -193,75 +244,291 @@ p, label {
     margin: 1rem 0;
     text-align: center;
   }
-}
 
-/* Footer CSS */
-footer {
-  display: flex;
-  flex-direction: column;
-  color: #fbfbfb;
-  padding: 20px;
-  .footer-content {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 50%;
+  .home-page {
+    .page-header {
+      padding: 100px;
+      h1 {
+        font-size: 1em;
+      }
+    }
+    .home-content {
+      .portfolio-section {
+      .swiper {
+        width: 100%; /* Make sure the Swiper takes the full width */
+        .swiper-slide img {
+          width: 100%; /* Ensure images inside Swiper adjust responsively */
+          height: auto;
+        }
+      }
+    }
+      .middle-section {
+        grid-template-columns: 1fr;
+        padding: 40px;
+      }
+      .services-section {
+        .service-groups {
+          flex-direction: column;
+          padding: 30px;
+          .service-group {
+            text-align: center;
+            h3 {
+              font-size: 2em;
+            }
+            p {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+      .review-section {
+        .testimonial-row {
+          flex-direction: column;
+        }
+      }
+  }
+  }
+
+  .shop-page {
+    .shop-content {
+      .products-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+  }
+
+
+  footer .footer-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
     .logo-location {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      img {
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-      }
-      .subtitle-info {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-      }
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
     }
     .footer-right {
-      display: flex;
-      justify-content: space-around;
-      .group {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-      }
+      justify-content: center;
+      gap: 40px;
     }
   }
-  .copyright {
-    margin-top: 20px;
-    text-align: center;
+
+  .services-page .services-content #serviceCont {
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
   }
 }
 
-/* Footer Large Mobile and Under CSS */
-@media screen and (max-width: 600px) {
-  footer {
-    .logo-socials-cont {
-      flex-direction: column;
-      gap: 40px;
-      align-items: center;
-      text-align: center;
-      .socials-sitemap {
-        flex-direction: column;
-      }
-      .logo-social-group {
-        .social-links {
-          flex-direction: column;
-        }
-        .logo-location {
-          flex-direction: column;
+@media screen and (max-width: 550px) {
+
+  .home-page {
+    .home-content {
+      .mission-section {
+        grid-template-columns: 1fr;
+        .mission-header-text {
+          h2 {
+            font-size: 2em;
+          }
+          .buttons-cont {
+            flex-direction: column;
+          
+          button {
+            width: 100%;
+          }}
         }
       }
     }
-    .copyright {
-      margin-top: 40px;
+  }
+
+  .about-page {
+  .about-content {
+      .about-statement-group {
+        grid-template-columns: 1fr;
+        gap: 0px;
+        .about-description {
+          p {
+            text-align: center;
+          }
+        }
+      }
+      .meet-the-team {
+        .staff-cards {
+          flex-direction: column;
+          padding: 30px;
+          .staff-card {
+            img {
+              width: 100%;
+              height: 500px;
+            }
+          }
+        }
+      }
+      .middle-section {
+        grid-template-columns: 1fr;
+        padding: 40px;
+      }
+    
+    .explore-section {
+      .buttons-cont {
+        flex-direction: column;
+        button {
+          width: 600px;
+        }
+      }
     }
   }
 }
+
+  .services-page {
+    .services-content {
+      .filter-container {
+        flex-direction: column;
+        select {
+          width: 400px;
+        }
+      }
+      #serviceCont {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+  }
+
+  .shop-page {
+    .shop-content {
+      #productCont {
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+        .modal-overlay .modal {
+          height: 450px;
+          img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+  .cart-page {
+    .cart-content {
+      .cart-cont {
+        .cart-inner {
+          .cart-total-section .buttons-cont {
+            flex-direction: column;
+            button {
+              width: 500px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .checkout-page {
+    .checkout-content {
+      flex-direction: column;
+      .question-section .buttons-cont {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .review-page {
+    .review-content {
+      flex-direction: column;
+      h2 {
+        font-size: 1.6em;
+      }
+      .review-form form {
+        flex-direction: column;
+        .form-inputs {
+          flex-direction: column;
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .single-page {
+  .single-content {
+    .information-section {
+      .service-details {
+        grid-template-columns: 1fr;
+        .content-cont {
+          align-items: center;
+          text-align: center;
+          p{
+            width: 500px;
+          }
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .review-section {
+      flex-direction: column;
+      .sub-form {
+        flex-direction: column;
+        width: 100%;
+        form {
+          flex-direction: column;
+          width: 100%;
+          .form-inputs {
+            width: 100%;
+            .regular-button {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .image-section {
+      grid-template-columns: 1fr;
+      padding: 40px;
+    }
+  }
+  }
+
+  .contact-page {
+  .contact-content {
+    .booking-section {
+      flex-direction: column;
+      text-align: center;
+      form {
+        flex-direction: column;
+        .form-inputs {
+          flex-direction: column;
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .contact-section {
+      flex-direction: column;
+      text-align: center;
+      form {
+        flex-direction: column;
+        .form-inputs {
+          flex-direction: column;
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .cancellation-section {
+      flex-direction: column;
+    }
+  }
+  }
+}
+
 
 /* Page Header CSS */
 .page-header {
@@ -521,50 +788,6 @@ footer {
   border: 2px solid #D4BC73;
 }
 
-/* Home Page Tablet */
-@media screen and (max-width: 900px) {
-  .home-content {
-    .mission-section {
-      grid-template-columns: 1fr;
-      padding: 30px;
-      text-align: center;
-    }
-    .portfolio-section {
-    .swiper {
-      width: 100%; /* Make sure the Swiper takes the full width */
-      .swiper-slide img {
-        width: 100%; /* Ensure images inside Swiper adjust responsively */
-        height: auto;
-      }
-    }
-  }
-    .middle-section {
-      grid-template-columns: 1fr;
-      padding: 40px;
-    }
-    .services-section {
-      .service-groups {
-        flex-direction: column;
-        padding: 30px;
-        .service-group {
-          text-align: center;
-          h3 {
-            font-size: 2em;
-          }
-          p {
-            font-size: 20px;
-          }
-        }
-      }
-    }
-    .review-section {
-      .testimonial-row {
-        flex-direction: column;
-      }
-    }
-  }
-}
-
 /* Review Page CSS */
 .review-content {
   display: flex;
@@ -767,37 +990,6 @@ footer {
   }
 }
 
-/* About Page Large Mobile */
-@media screen and (max-width: 600px) {
-  .about-content {
-    .about-statement-group {
-      grid-template-columns: 1fr;
-      gap: 0px;
-      .about-description {
-        p {
-          text-align: center;
-        }
-      }
-    }
-    .meet-the-team {
-      .staff-cards {
-        flex-direction: column;
-        padding: 30px;
-        .staff-card {
-          img {
-            width: 100%;
-            height: 500px;
-          }
-        }
-      }
-    }
-    .middle-section {
-      grid-template-columns: 1fr;
-      padding: 40px;
-    }
-  }
-}
-
 /* Services Page CSS */
 .services-content {
   display: flex;
@@ -890,21 +1082,6 @@ footer {
           }
         }
       }
-    }
-  }
-}
-
-/* Services Page Large Mobile */
-@media screen and (max-width: 600px) {
-  .services-content {
-    .filter-container {
-      flex-direction: column;
-      select {
-        width: 400px;
-      }
-    }
-    #serviceCont {
-      grid-template-columns: 1fr;
     }
   }
 }
@@ -1057,48 +1234,6 @@ footer {
   }
 }
 
-/* Single Page Large Mobile */
-@media screen and (max-width: 600px) {
-  .single-content {
-    .information-section {
-      .service-details {
-        grid-template-columns: 1fr;
-        .content-cont {
-          align-items: center;
-          text-align: center;
-          p{
-            width: 500px;
-          }
-          button {
-            width: 100%;
-          }
-        }
-      }
-    }
-    .review-section {
-      flex-direction: column;
-      .sub-form {
-        flex-direction: column;
-        width: 100%;
-        form {
-          flex-direction: column;
-          width: 100%;
-          .form-inputs {
-            width: 100%;
-            .regular-button {
-              width: 100%;
-            }
-          }
-        }
-      }
-    }
-    .image-section {
-      grid-template-columns: 1fr;
-      padding: 40px;
-    }
-  }
-}
-
 
 /* Shop Page CSS */
 .shop-content {
@@ -1213,39 +1348,7 @@ footer {
   }
 }
 
-/* Shop Page Tablet */
-@media screen and (max-width: 900px) {
-  .shop-content {
-    .products-grid {
-      grid-template-columns: repeat(2,1fr);
-    }
-  }
-}
 
-/* Shop Page Large Mobile */
-@media screen and (max-width: 600px) {
-  .shop-content {
-    .products-grid {
-      grid-template-columns: 1fr;
-    }
-    .loyalty-section {
-      text-align: center;
-      padding: 30px;
-      p {
-        width: 450px;
-      }
-      .loyalty-form {
-        form {
-          display: flex;
-          flex-direction: column;
-          .form-inputs {
-            flex-direction: column;
-          }
-        }
-      }
-    }
-  }
-}
 
 /* Cart Page CSS */
 .cart-content {
@@ -1593,41 +1696,6 @@ footer {
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
       }
-    }
-  }
-}
-
-/* Contact Page Large Mobile */
-@media screen and (max-width: 600px) {
-  .contact-content {
-    .booking-section {
-      flex-direction: column;
-      text-align: center;
-      form {
-        flex-direction: column;
-        .form-inputs {
-          flex-direction: column;
-          button {
-            width: 100%;
-          }
-        }
-      }
-    }
-    .contact-section {
-      flex-direction: column;
-      text-align: center;
-      form {
-        flex-direction: column;
-        .form-inputs {
-          flex-direction: column;
-          button {
-            width: 100%;
-          }
-        }
-      }
-    }
-    .cancellation-section {
-      flex-direction: column;
     }
   }
 }
