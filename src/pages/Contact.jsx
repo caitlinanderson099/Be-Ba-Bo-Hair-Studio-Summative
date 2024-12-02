@@ -300,18 +300,28 @@ const Contact = () => {
     );
   };
 
+  // Loyalty Form Component
+  
+
 
   return (
     <>
      {/* SEO */}
      <Seo title="Contact Us - Be Ba Bo"/>
-    <div className='contact-page'>
+
+      <div className='contact-page'>
         <PageHeader title='Contact Us' image_url={'/contact-bg.jpg'}/>
         <div className='contact-content'>
           {/* Booking Section */}
           <div className='booking-section'>
             <h2> Book an appointment </h2>
             <BookingForm/>
+            <div className='loyalty-section'>
+              <h3 className='page-title'> Get 10% Off Your 10th Appointment! </h3>
+              <p>We value your trust in our salon, and to show our appreciation, we’re thrilled to offer 10% off your 10th appointment! Every visit brings you closer to this special reward.
+                Book your next appointment and let us pamper you while you earn your way to a well-deserved discount! Because great hair deserves great perks.
+              </p>
+            </div>
           </div>
 
           {/* Contact Section */}

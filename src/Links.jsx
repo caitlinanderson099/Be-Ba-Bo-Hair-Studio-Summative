@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Cart from "./components/Cart";
 import SinglePage from "./pages/SinglePage";
 import Checkout from "./pages/Checkout";
+import ReviewPage from "./pages/ReviewPage";
 
 const Links = () => {
     return (
@@ -22,6 +23,7 @@ const Links = () => {
             {/* Single Page */}
             <Route path='/service/:id' element={<SinglePage/>}/>
             <Route path="/checkout" element={<Checkout/>}/>
+            <Route path="/review" element={<ReviewPage/>}/>
         </Routes>
     );
 };

@@ -32,6 +32,13 @@ const Home = () => {
     navigate('/contact');
   };
 
+  // Handle Review Navigation
+  const handleReview = (e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+    navigate('/review');
+  }
+
   // Handle Shop Navigation
   const handleShop = (e) => {
     e.preventDefault();
@@ -225,7 +232,7 @@ const Home = () => {
             </div>
 
           </div>
-          <button className='primary-button'> Leave Us a Review </button>
+          <button onClick={handleReview} className='primary-button'> Leave Us a Review </button>
         </div>
 
       </div>
