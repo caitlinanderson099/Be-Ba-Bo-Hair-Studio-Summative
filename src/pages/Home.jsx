@@ -20,18 +20,21 @@ const Home = () => {
   // Handle Explore Navigation
   const handleExplore = (e) => {
     e.preventDefault();
+    window.scrollTo(0, 0);
     navigate('/services');
   };
 
   // Handle Book Navigation
   const handleBook = (e) => {
     e.preventDefault();
+    window.scrollTo(0, 0);
     navigate('/contact');
   };
 
   // Handle Shop Navigation
   const handleShop = (e) => {
     e.preventDefault();
+    window.scrollTo(0, 0);
     navigate('/shop');
   };
 
@@ -42,7 +45,7 @@ const Home = () => {
       <div className="home-content">
         <div className='mission-section'>
           <div className='img-cont'>
-            <img src="/home-header-img.jpg" alt="Person straightening customer's hair" />
+            <img src="/home-img1.jpg" alt="Person straightening customer's hair" />
           </div>
           <div className='mission-header-text'>
             <h2> Enhancing Natural Beauty Through Creativity </h2>
@@ -89,8 +92,8 @@ const Home = () => {
         </div>
 
         <div className="middle-section">
-          <img src="/home-img1.jpg" alt="" />
           <img src="/home-img2.jpg" alt="" />
+          <img src="/home-img3.jpg" alt="" />
         </div>
 
         <div className="services-section">

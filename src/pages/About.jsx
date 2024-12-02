@@ -1,7 +1,25 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
 import PageHeader from "../components/PageHeader";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+
+    const navigate = useNavigate();
+
+    const handleShop = (e) => {
+        e.preventDefault();
+        window.scrollTo(0, 0);
+        navigate('/shop')
+    }
+
+    const handleServices = (e) => {
+        e.preventDefault();
+        window.scrollTo(0, 0);
+        navigate('/services')
+    }
+
+
+
   return (
     <div className='about-page'>
         <PageHeader title='About Us' image_url={'/about-bg.jpg'}/>
@@ -80,7 +98,7 @@ const About = () => {
             {/* Image Break */}
             <div className="middle-section">
                 <img src="/about-pic1.jpg" alt="" />
-                <img src="/about-pic2.jpg" alt="" />
+                <img src="/about-pic3.jpg" alt="" />
             </div>
 
             {/* Explore Section */}
@@ -88,8 +106,8 @@ const About = () => {
                 <h2> Explore Our Business! </h2>
                 <p>At Be Ba Bo, we believe in celebrating individuality and empowering confidence through exceptional hair care. Let us help you shine—inside and out! Explore what we have to offer.</p>
                 <div className="buttons-cont">
-                    <button className="secondary-button">Our Shop</button>
-                    <button className="primary-button">Our Services</button>
+                    <button onClick={handleShop} className="secondary-button">Our Shop</button>
+                    <button onClick={handleServices} className="primary-button">Our Services</button>
                 </div>
             </div>
         </div>

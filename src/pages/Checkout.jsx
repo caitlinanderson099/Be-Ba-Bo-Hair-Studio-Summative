@@ -1,24 +1,27 @@
 import PageHeader from "../components/PageHeader";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 const Checkout = () => {
 
   const [isModalVisible, setIsModalVisible] = useState(false);
   const navigate = useNavigate();
+  const { clearCart } = useContext(CartContext);
 
   const handleBack = (e) => {
     e.preventDefault();
     navigate('/cart');
   };
 
-  const handleConfirmation = (e) => {
-    e.preventDefault();
+  const handleConfirmation = () => {
     setIsModalVisible(true); // Show the confirmation modal
   };
 
   const closeModal = () => {
     setIsModalVisible(false); // Hide the modal
+    clearCart();
+    window.scrollTo(0, 0);
     navigate('/');
   };
 

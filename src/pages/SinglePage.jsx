@@ -70,11 +70,13 @@ const SinglePage = () => {
 
     const handleBook = (e) => {
       e.preventDefault();
+      window.scrollTo(0, 0);
       navigate('/contact');
     };
 
     const handleBack = (e) => {
       e.preventDefault();
+      window.scrollTo(0, 0);
       navigate(-1);
     };
 

@@ -326,7 +326,7 @@ const Contact = () => {
               <p>Failure to cancel an appointment and/or no-show will result in payment of 100% of the scheduled appointment.</p>
             </div>
             <div className='cancellation-img'>
-              <img src="/mens-cut.jpg" alt="" />
+              <img src="/cancellation-pic.jpg" alt="" />
             </div>
           </div>
         </div>

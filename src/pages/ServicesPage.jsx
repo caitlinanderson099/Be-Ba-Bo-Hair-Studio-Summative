@@ -97,6 +97,7 @@ const ServicesPage = () => {
     // Navigate to Booking Page
     const handleBook = (e) => {
         e.preventDefault();
+        window.scrollTo(0, 0);
         navigate('/contact');
     };
 
