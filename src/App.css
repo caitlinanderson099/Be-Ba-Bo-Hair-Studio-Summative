@@ -688,6 +688,7 @@ footer {
 .page-header {
   color: #fbfbfb;
   font-size: 3rem;
+  padding: 130px;
   place-items: center;
   background-size: cover;
   background-position: center;
