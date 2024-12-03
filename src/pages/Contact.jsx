@@ -200,7 +200,7 @@ const Contact = () => {
         testForm.append('your-subject', subject);
         testForm.append('your-message', message);
   
-      axios.post(formEndPoint, testForm, {
+      axios.post(contactFormEndPoint, testForm, {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         }
@@ -299,8 +299,6 @@ const Contact = () => {
       </form>
     );
   };
-
-  // Loyalty Form Component
   
 
 

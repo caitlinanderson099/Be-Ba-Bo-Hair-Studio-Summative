@@ -1,17 +1,10 @@
 import ProductList from '../components/ProductList';
 import PageHeader from '../components/PageHeader';
-import { useState } from 'react';
-import axios from 'axios';
 import Seo from '../components/Seo';
 
-const formEndPoint = import.meta.env.VITE_APP_WP_API_LOYALTY_FORM_ENDPOINT;
 
 
 const Shop = () => {
-
-    const [loading, setLoading] = useState(true); // State for loading
-
-
     return (
         <>
          {/* SEO */}
