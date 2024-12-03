@@ -18,7 +18,6 @@ button:hover {
   min-height: 100dvh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-color: #fbfbfb;
 }
 
 /* Body Headings and A Tag CSS */
@@ -403,8 +402,10 @@ footer {
 /* LARGER MOBILE */
 @media screen and (max-width: 600px) {
 
+
   /* HOME PAGE */
   .home-page {
+    
     .home-content {
       .mission-section {
         grid-template-columns: 1fr;
@@ -687,13 +688,10 @@ footer {
 .page-header {
   color: #fbfbfb;
   font-size: 3rem;
-  padding: 130px;
+  place-items: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  h1 {
-    text-align: center;
-  }
 }
 
 /* Single Page Header CSS */
